@@ -1,0 +1,174 @@
+/* ***********************************  Featured Vehicles *********************************/
+.vehicles{
+    background-color: #F8F9FA;
+    width: 100%;
+    text-align: center;
+}
+.vehicles h5{
+    color: #950740;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding-top: 100px;
+}
+.vehicles h1{
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+/* vehicles Information */
+#firstline{
+    display: grid;
+}
+.vehiclesinfo{
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
+    transition: 1s;
+}
+#morecars{
+    display: none;
+    transition: 1s;
+}
+
+.vehiclesinfo .car{
+    width: 100%;
+    margin: 40px auto 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.1);
+}
+
+/* Car images */
+.vehiclesinfo .car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 100% 35%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: .5s;
+}
+.vehiclesinfo .car img:hover {
+    object-position: 100% 55%;
+}
+
+.vehiclesinfo .car .info {
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.info h3 {
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.info p{
+    color: rgba(0,0,0,.4);
+}
+.info p span{
+    margin-left: 80px;
+    font-weight: 600;
+    color: #950740;
+}
+.info button{
+    margin: 10px 5px ;
+    padding: 9px;
+    width: 150px;
+    background-color: #c3073f;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.info button:hover {
+    background-color: #dd0b5f;
+}
+.info #book{
+    background-color: #950740;
+}
+.info #book:hover {
+    background-color: #b9083d;
+}
+
+/* *************************************  Drop down  ************************ */
+.dropdown{
+    width: 100%;
+    background-color: #F8F9FA;
+    padding: 30px 0;
+    text-align: center;
+}
+.dropdown a {
+    text-decoration: none;
+}
+.dropdown button i{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.dropdown button {
+    cursor: pointer;
+    padding: 15px ;
+    font-size:14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #950740;
+    border-radius: 3px;
+    outline: none;
+    transition: .5s;
+}
+.dropdown button:hover{
+    background-color: #950740;
+    color: white;
+}
+
+/*   More Button Display     On  Off   */
+.dropdown #dropdownlaptop {
+    display: block;
+    margin: 0 auto;
+}
+.dropdown #dropdownmobile{
+    display: none;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width : 700px){
+     /* ***********************************  Featured Vehicles *********************************/
+     .vehicles h5{
+        padding-top: 50px;
+    }
+    .vehicles h1{
+        font-size: 28px;
+    }
+    /* vehicles Information */
+    .vehiclesinfo{
+        width: 100%;
+    }
+    #firstline{
+        display: block;
+    }
+    #morecars{
+        display: none;
+        transition: 1s;
+    }
+    .vehiclesinfo .car{
+        width: 93%;
+        margin: 40px auto 0;
+        box-shadow: 0 5px 12px -1px rgb(0 0 0 / 3%);
+    }
+
+    /*   More Button Display     On Off   */
+    .dropdown #dropdownlaptop {
+        display: none;
+        margin: 0 auto;
+    }
+    .dropdown #dropdownmobile{
+        display: block;
+        margin: 0 auto;
+    }
+   
+}

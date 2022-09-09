@@ -1,0 +1,128 @@
+/* nevigation bar */
+.nevbar{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+    display: flex;
+    background-color:black;
+    color: white;
+    box-shadow: 0 5px 12px -1px rgb(0 0 0 / 3%);
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+.logo a h1{
+    margin: 15px 100px;
+}
+.logo a h1 span{
+    color: #c3073f;
+}
+.menu{
+    flex: 1;
+    text-align: right;
+    margin-top: 28px;
+    margin-right: 100px;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+.menutext{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 15px;
+    transition: 0.5s;
+    font-weight: 500;
+    position: relative;
+}
+.menutext:hover{
+    color: #c3073f;
+}
+
+#login {
+    background-color:#c3073f;
+    padding: 5px 9px;
+    color: white;
+    border-radius: 2px;
+}
+#login:hover {
+    background-color: #dd0b5f;
+}
+.menuicon{
+    margin: auto;
+    color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+.menuicon i span {
+    font-weight: 600;
+}
+
+.cutline{
+    height: 94vh;
+    clip-path: polygon(100% 84%, 0% 100%, 100% 100%);
+    background-color: #f8f9fa;
+    border-bottom: 10px solid #f8f9fa;
+    position: relative;
+    bottom: -1px;
+}
+.cutlinemenu {
+    height: 83vh;
+    clip-path: polygon(100% 84%, 0% 100%, 100% 100%);
+    background-color: #f8f9fa;
+    border-bottom: 10px solid #f8f9fa;
+    position: relative;
+    bottom: -1px;
+}
+
+@media only screen and (max-width : 1360px){
+    .nevbar{
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    .logo a h1{
+        margin: 15px 12px;
+    }
+    .menu{
+        text-align: right;
+        margin-right: 0px;
+        position:absolute;
+        background-color: black;
+        width: 100%;
+        top: 49px;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: 0px 10px 12px -1px rgb(0 0 0 / 10%);
+        transition: .5s;
+    }
+    .menu ul li{
+        list-style: none;
+        display: block;
+        margin: 25px 40px 35px auto;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: white;
+        margin-left: 0px;
+        font-size: 15px;
+        transition: 0.5s;
+        font-size: 18px;
+    }
+
+
+    .menuicon{
+        display: block;
+        margin-right: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+@media only screen and (max-width : 700px){
+    
+    .cutline , .cutlinemenu{
+        display: none;
+    }
+}

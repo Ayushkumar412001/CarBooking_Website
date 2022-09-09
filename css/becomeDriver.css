@@ -1,0 +1,46 @@
+/* ********************************  Become a Driver ************************* */
+.driver {
+    width: 100%;
+    display: flex;
+    height: 400px;
+    color: white;
+}
+.driver .cutcolor {
+    border-right: 300px solid transparent;
+    border-top: 400px solid #950740;
+    border-left: 400px solid #950740;
+}
+.driver .becomedriver {
+    padding: 8% 4%;
+}
+.driver .becomedriver h1 {
+    font-size: 38px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.driver .becomedriver a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #c3073f;
+    border-radius: 3px;
+}
+.driver .becomedriver a:hover{
+    background-color: #dd0b5f;
+}
+
+@media only screen and (max-width : 700px){
+    /* ********************************  Become a Driver ************************* */
+    .driver {
+        background-position: center;
+    }
+    .driver .cutcolor {
+        display: none;
+    }
+    .driver .becomedriver {
+        margin: auto;
+    }
+    .driver .becomedriver h1 {
+        font-size: 30px;
+    }
+}

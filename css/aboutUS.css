@@ -1,0 +1,100 @@
+/* *******************************   About us  **************************************** */
+.about{
+    width: 100%;
+    display: flex;
+    background-color:#F8F9FA;
+    padding-top: 80px;
+}
+/* About image */
+.about .imgcontanner{
+    width: 50%;
+    position: relative;
+    
+}
+.about .imgcontanner img {
+    position: absolute;
+    object-position: 40% 65%;
+    object-fit: cover;   
+    width: 550px;
+    height: 450px;
+    top: 80px;
+    left: 32%;
+    background-color: rgba(0, 0, 0, 0.26);
+    transition: .5s;
+}
+.about .imgcontanner img:hover {
+    object-position: 45% 65%;
+
+}
+
+/* about content */
+.about .aboutcontent {
+    width: 50%;
+    padding: 80px 10% 80px 16%;
+    color: white;
+    background-color: #950740;
+}
+.aboutcontent h5 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.aboutcontent h1 {
+    font-weight: 600;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.aboutcontent p {
+    padding-bottom: 30px;
+    line-height: 25px;
+}
+
+/* button Search Vehicle */
+.aboutcontent a {
+    color: white;
+    text-decoration: none;
+    background-color: #c3073f;
+    padding: 8px 20px;
+    border-radius: 3px;
+}
+.aboutcontent a:hover {
+    background-color: #dd0b5f;
+}
+
+@media only screen and (max-width : 700px){
+    /* *******************************   About us  **************************************** */
+    .space {
+        display: none;
+    }
+    .about{
+        width: 100%;
+        display: block;
+        background-color:#F8F9FA;
+        padding-top: 0px;
+    }
+    /* About image */
+    .about .imgcontanner{
+        width: 100%;
+        /* padding:3%; */
+        padding-bottom: 50px;
+        box-sizing: border-box;
+
+    }
+    .about .imgcontanner img {
+        display: none;
+    }
+
+    /* about content */
+    .about .aboutcontent {
+        width: 100%;
+        padding: 65px 4%;
+        box-sizing: border-box;
+    }
+    .aboutcontent h5 {
+        margin-bottom: 10px;
+    }
+    .aboutcontent h1 {
+        font-size: 30px;
+    }
+
+}

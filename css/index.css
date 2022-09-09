@@ -1,0 +1,663 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: auto;
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #830538;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #950740;
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+/* preloader */
+#preloader {
+    background-color: black;
+    width: 100%; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+#preloader img {
+    object-position: center;
+    height: 12%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* video section */
+.video {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+    position: fixed;
+}
+#video {
+    height: 0vh;
+    transition: .5s;
+}
+.video .cross {
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+}
+.video .cross:hover {
+    color: white;
+}
+.video .cross i {
+    cursor: pointer;
+}
+.video .songvideo {
+    width: 70%;
+    height: 100vh;
+    margin: 90px auto ;
+    box-sizing: border-box;
+}
+.video .songvideo video {
+    width: 100%;
+}
+.video .songvideo iframe {
+    width: 100%;
+    height: 75%;
+}
+
+.contanner{
+    width: 100%;
+}
+.cover{
+    background: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)) ,url('https://source.unsplash.com/1080x720/?red,black,car');
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position:fixed;
+    top: 0;
+    z-index: -10;
+    filter: blur(4px);
+}
+
+/* cover about */
+.coverabout {
+    background: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) ,url('https://source.unsplash.com/1080x720/?aboutus,us,car');
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position:fixed;
+    top: -50px;
+    z-index: -10;
+    filter: blur(4px);
+}
+
+
+
+/* home top contenner */
+.content{
+    width: 100%;
+    background-color: #6f2232;
+    color: white;
+}
+.top{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+
+}
+.top .topcontent{
+    margin: auto;
+    max-width: 900px;
+    text-align: center;
+}
+.top .topcontent h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.topcontent .homeplay{
+    display: flex;
+    max-width: 340px;
+    margin: 40px auto;
+}
+.topcontent .homeplay a{
+    color: #c3073f;
+    font-size: 55px;
+    text-decoration: none;
+    transition: .5s;
+    text-shadow: 0px 0px 20px black;
+}
+.topcontent .homeplay a:hover{
+    margin-right: 5px;
+    transform: scale(1.08);
+}
+.topcontent .homeplay .line{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 38px 10px;
+}
+.topcontent .homeplay p{
+    margin: 27px 0;
+}
+
+/* top about us content page css */
+.topabout {
+    color: white;
+    width: 90%;
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+}
+.topabout p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.topabout p a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+.topabout p a:hover {
+    color: white;
+}
+.topabout p i {
+    padding: 0 10px 0 2px;
+}
+.topabout h1 {
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+
+/* *************************************   Make Your Trip  **************************** */
+.destination{
+    background-color: #F8F9FA;
+    width: 100%;
+    height: 350px;                   /* height of Destination  */
+    position: relative;
+    
+}
+.trip{
+    width: 75%;
+    display: flex;
+    position: absolute;
+    top: -220px;
+    left: 13%;
+}
+/* trip form */
+.trip .tripform{
+    width: 35%;
+    background-color: #950740;
+    padding: 30px;
+    border-radius: 5px;
+    color: white;
+}
+.trip .tripform h3{
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.trip .tripform label{
+    font-size: 12px;
+    font-weight: 600;
+}
+.trip .tripform input{
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #950740;
+    border: 1px solid #dd0b5f;
+    margin-bottom: 10px;
+    outline: none;
+    color: rgb(230, 230, 230);
+}
+::placeholder{
+    color: rgb(230, 230, 230);
+}
+.trip .tripform button{
+    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+    background-color:#c3073f;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+.trip .tripform button:hover{
+    background-color: #b9083d;
+}
+
+/* trip Information */
+.trip .tripinfo{
+    margin: 50px 0;
+    background-color: white;
+    width: 65%;
+    padding: 60px 50px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: black;
+    box-shadow: 0 5px 12px -1px rgb(0 0 0 / 3%);
+}
+.trip .tripinfo h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* info Icons */
+.trip .tripinfo .infoicon{
+    display: flex;
+    width: 100%;
+}
+.infoicon .one, .two, .three{
+    width: 33.5%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.infoicon i{
+    font-size: 34px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,.09);
+    border-radius: 80%;
+    margin-bottom: 20px;
+    color: #950740;
+}
+
+/* button */
+.tripinfo button{
+    padding: 20px;
+    margin-top: 10px;
+    background-color:#950740;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: .5s;
+}
+.tripinfo button:hover{
+    background-color: #830538;
+}
+
+
+/* ******************************************  page numbers *****************************/
+.pageno{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F8F9FA;
+    text-align: center;
+    padding-top: 100px;
+}
+.pageno ul li {
+    list-style: none;
+    display: inline-block;
+}
+.pageno ul li a{
+    text-decoration: none;
+    color: #950740;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 17px;
+    border-radius: 50px;
+    transition: .5s;
+    background-color: white;
+}
+.pageno ul li span {
+    padding: 10px 19px;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #950740;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.pageno ul li a:hover {
+    color: white;
+    background-color: #950740;
+}
+
+
+
+
+
+
+
+/* *********************************************  Contact us ****************************** */
+.contact {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F8F9FA;
+    padding: 100px 0;
+}
+.contactcontanner {
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.contactcontanner .contanner {
+    width: 30%;
+}
+.contactcontanner .contanner .heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.07);
+
+}
+.heading .icon {
+    padding: 0 0 0 20px;
+    font-size: 20px;
+    color: #950740;
+}
+.heading .info {
+    width: 70%;
+    margin: 25px auto;
+}
+.heading .info #contactinfo {
+    color: black;
+    font-weight: 500;
+}
+
+/* message form */
+.messageform {
+    width: 70%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.07);
+    margin-left: 20px;
+    /* border-radius: 5px; */
+    background-color: #9507400a;
+}
+.messageform .form {
+    width: 80%;
+    margin: 50px auto;
+}
+.messageform input , .messageform #inputbox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    /* border-radius: 5px; */
+    margin-top: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+}
+.messageform button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #950740;
+    border: none;
+    /* border-radius: 3px; */
+    cursor: pointer;
+}
+.messageform button:hover {
+    background-color: #b9083d;
+}
+
+/* map */
+.map {
+    background-color: #F8F9FA;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.map .mapcontanner {
+    width: 70%;
+    margin: 0 auto;
+}
+.map .mapcontanner iframe{
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+}
+
+
+
+/**********************************  pricing page css ***************************/
+.pricingcontanner {
+    width: 1110px;
+    margin: 0 auto;
+}
+.pricingheading {
+    display: flex;
+    text-align: center;
+}
+.pricingheading .carsno {
+    width: 605px;
+}
+.pricingheading .rate {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 90px; 
+}
+.pricingheading .dayone {
+    background-color: #c3073f;
+}
+.pricingheading .daytwo {
+    background-color: #950740;
+}
+.pricingheading .daythree {
+    background-color: #6f2232;
+}
+/* menu cut */
+.rate .menucut {
+    position: absolute;
+    border-left: 107px solid transparent;
+    border-right: 107px solid transparent;
+    bottom: -15px;
+}
+.rate .cutone {
+    border-top: 15px solid #c3073f;
+}
+.rate .cuttwo {
+    border-top: 15px solid #950740;
+}
+.rate .cutthree {
+    border-top: 15px solid #6f2232;
+}
+
+.rate h3 {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    margin: auto;
+}
+
+/* pricing content lines  */
+.pricingcontent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sidescrole {
+    width: 100%;
+    overflow: auto;
+}
+.pricingcontent .carimage {
+    width: 610px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* car images with ratings */
+
+
+/* .carimage .carimgall {
+    object-fit: cover;
+    height: 100px;
+    width: 40%;
+    margin: 25px;
+} */
+
+/* rated */
+.carimage .rated {
+    display: flex;
+}
+.rated .stars {
+    margin-left: 10px;
+    color: rgba(0,0,0,0.2);
+}
+.rated .stars .fas {
+    color: #dd0b5f;
+}
+
+/* fuel box */
+.fuel {
+    width: 280px;
+    background-color: #f0f0f0;
+    padding: 45px 0;
+    color: rgba(0,0,0,.8);
+    text-align: center;
+    border: 1px solid white;
+}
+.fuel p {
+    font-size: 14px;
+}
+.fuel #per {
+    color: rgba(0,0,0,0.4);
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.fuel span {
+    color: #950740;
+    font-size: 22px;
+}
+
+
+
+/* ************************************  Mobile view  ****************************** */
+@media only screen and (max-width : 700px){
+
+    .topspace {
+        height: 40vh;
+    }
+    
+    .content .top , .content .topabout{
+        top: 18%;
+    
+    }
+    .content .top .topcontent , .content .topabout .topaboutcontent{
+        max-width: 700px;
+        text-align: left;
+        padding: 0 10px;
+        
+    }
+    .topcontent .homeplay{
+        display: flex;
+        width: 290px;
+        margin: 20px 0;
+    }
+    .content .top .topcontent h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .topcontent .homeplay .line{
+        width: 20px;
+        height: 2px;
+        margin: 38px 5px;
+    }
+    .topcontent .homeplay p{
+        margin: 29px 0;
+        font-size: 14px;
+    }
+
+/* *********************************  Make Your Trip  ******************************** */
+    .destination{
+        margin-top: 600px;
+    }
+    .destination{
+        width: 100%;
+        height: 1096px;                  /*  height of Destination  */
+        position: relative;
+    }
+    .destination .trip{
+        width: 100%;
+        display: block;
+        position:absolute;
+        top: -110px;
+        left: 0;
+    }
+    /* trip form */
+    .trip .tripform{
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+    }
+
+    /* trip Information */
+    .trip .tripinfo{
+        margin: 10px auto;
+        width: 80%;
+        padding: 30px 20px;
+        border-radius: 5px;
+    }
+
+    /* info Icons */
+    .trip .tripinfo .infoicon{
+        display: block;
+        width: 100%;
+    }
+    .infoicon .one, .two, .three{
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+    .infoicon i{
+        margin-bottom: 0px;
+    }
+
+    /* button */
+    .tripinfo button{
+        margin-top: 0px;
+        width: 100%;
+    }
+
+   
+    /* ************************************* Contact form *******************************8 */
+    .contactcontanner {
+        width: 95%;
+        display: block;
+    }
+    .contactcontanner .contanner {
+        width: 100%;
+    }
+    /* message form */
+    .messageform {
+        width: 100%;
+        margin-left: 0px;
+        padding: 1px 0;
+    }
+    .messageform .form {
+        width: 93%;
+        margin: 50px auto;
+    }
+    .map .mapcontanner {
+        width: 95%;
+    }
+    
+}
